@@ -1,5 +1,4 @@
 package ru.astondevs.lesson2;
-
 public class Homwork2 {
     public static void main(String[] args) {
         System.out.println("______---1---_______");
@@ -11,7 +10,6 @@ public class Homwork2 {
         System.out.println("______---4---_______");
         compareNumbers();
     }
-
     static void printThreeWords() {
         System.out.println("Orange\nBanana\nApple");
     }
