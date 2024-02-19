@@ -1,6 +1,6 @@
 package ru.astondevs.lesson3;
 
-public class HoumworkThree {
+public class HomeworkThree {
     public static void main(String[] args) {
         System.out.println("______---1---_______");
         System.out.println(taskOne(-11, 31));
@@ -144,4 +144,3 @@ public class HoumworkThree {
         }
     }
 }
-
