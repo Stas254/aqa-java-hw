@@ -1,26 +1,19 @@
 package ru.astondevs.lesson5;
 
-public class Triangle implements Figure {
+public class Triangle extends Figure implements SquareFigure, PerimeterFigure {
     private double a;   //Одна сторона треугольника
     private double b;   //Вторая сторона треугольника
     private double c;   //Третья сторона треугольника
-    private String backgrColor;   //Цвет фона треугольника
-    private String borderColor;   //Цвет границы треугольника
 
-    public Triangle(double a, double b, double c, String backgrColor, String borderColor) {
+    public Triangle(String backgrColor, String borderColor, double a, double b, double c) {
+        super(backgrColor, borderColor);
         this.a = a;
         this.b = b;
         this.c = c;
-        this.backgrColor = backgrColor;
-        this.borderColor = borderColor;
     }
 
-    public String getBackgrColor() {
-        return backgrColor;
-    }
-
-    public String getBorderColor() {
-        return borderColor;
+    public void figureInfo() {   //Цвета фона и границы треугольника
+        System.out.println("Цвет фона " + getBackgrColor() + ", цвет границы " + getBorderColor() + " треугольника");
     }
 
     @Override
@@ -33,7 +26,7 @@ public class Triangle implements Figure {
         } else if (a <= 0 || b <= 0 || c <= 0)
             System.out.println("Стороны треугольника при вычислении площади должны быть положительными и не равными нулю!");
         else if (a >= b + c || b >= a + c || c >= a + b)
-            System.out.println("Каждая сторона треугольника при вычислении площади должна быть меньше сумме двух других сторон! Проверьте корректность введенных сторон трегольника!");
+            System.out.println("Каждая сторона треугольника должна быть меньше сумме двух других сторон! Проверьте корректность введенных сторон трегольника!");
     }
 
     @Override
@@ -45,6 +38,6 @@ public class Triangle implements Figure {
         } else if (a <= 0 || b <= 0 || c <= 0)
             System.out.println("Стороны треугольника при вычислении периметра должны быть положительными и не равными нулю!");
         else if (a >= b + c || b >= a + c || c >= a + b)
-            System.out.println("Каждая сторона треугольника при вычислении периметра должна быть меньше сумме двух других сторон! Проверьте корректность введенных сторон трегольника!");
+            System.out.println("Каждая сторона треугольника должна быть меньше сумме двух других сторон! Проверьте корректность введенных сторон трегольника!");
     }
 }
